@@ -43,3 +43,19 @@ function unique(arr) {
   return uniqArray;
 }
 console.log(unique(words));
+
+// Напишите функцию которая вычисляет квадратные корни для всех чисел у которых квадратный корень будет целым числом и возвращать массив корней этих чисел
+// [4, 3, 5, 16, 16, 33, 4, 9] // [2, 4, 4, 2, 3]
+function showSqr(arr) {
+  const sqrArr = [];
+  for (const element of arr) {
+    const number = Math.sqrt(element);
+    if (element % number === 0) {
+      sqrArr.push(number);
+    }
+  }
+  return sqrArr;
+}
+console.log(showSqr([4, 3, 5, 16, 16, 33, 4, 9]));
+
+
