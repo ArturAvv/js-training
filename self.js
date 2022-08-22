@@ -17,6 +17,29 @@ function findSmallerNumber(numbers) {
 }
 console.log(findSmallerNumber(numbers));
 
-// write function that returns array with uniq elements
+// write function that returns array with unique elements
 
-const words = ["HTML", "CSS", "JS", "CSS", "JS"]
+const words = [
+  "HTML",
+  "CSS",
+  "JS",
+  "CSS",
+  "JS",
+  "Node.js",
+  "React",
+  "HTML",
+  "JS",
+  "CSS",
+];
+
+function unique(arr) {
+  let uniqArray = [];
+
+  for (let element of arr) {
+    if (!uniqArray.includes(element)) {
+      uniqArray.push(element);
+    }
+  }
+  return uniqArray;
+}
+console.log(unique(words));
