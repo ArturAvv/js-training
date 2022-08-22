@@ -58,4 +58,17 @@ function showSqr(arr) {
 }
 console.log(showSqr([4, 3, 5, 16, 16, 33, 4, 9]));
 
+// function findLongestWord принимает произвольную строку, слова разделяет пробелом и возвращает самое длинное слово в этой строке
+
+function findLongestWord(string) {
+  const words = string.split(" ");
+  let longestWord = words[0];
+  for (const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord("We are the champions my friend"));
 
